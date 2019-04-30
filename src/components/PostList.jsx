@@ -7,24 +7,19 @@ import Moment from 'moment';
 
 function PostList(props) {
   console.log("list", props.masterPostList)
-
-  // const [time, setTime] = useState(props.timeOpen);
-
-  Object.keys(props.masterPostList).forEach((post) => 
   
-    props.masterPostList[post].formattedTime = (props.masterPostList[post].timeOpen).fromNow(true)
-  );
+  // let formatTime = Object.keys(props.masterPostList).forEach((post) => 
+  //   props.masterPostList[post].formattedTime = (props.masterPostList[post].timeOpen).fromNow(true)
+  // );
 
   return(
     <div>
-      {/* <button onClick={() => setTime(time.fromNow(true))}>Set Time</button> */}
-      {/* <p>{time}</p> */}
       {Object.keys(props.masterPostList).map((postId, index) => {
         let post = props.masterPostList[postId];
         return <Post 
         title = {post.title}
         text = {post.text} 
-        timeOpen = {post.formattedTime}
+        timeOpen = {post.timeOpen}
         id = {post.id}
         key = {index} />
         }
