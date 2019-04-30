@@ -32,7 +32,7 @@ function NewPostForm(props) {
         placeholder="details"
         id="text"
         ref={(input) => {_text = input;}} />
-      <button type='submit'></button>
+      <button type='submit'>Submit New Post</button>
     </form>
   );
 }

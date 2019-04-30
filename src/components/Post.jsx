@@ -6,8 +6,8 @@ function Post(props) {
   console.log("post", props)
   return (
     <div>
-      <h2>A Post {props.title}</h2>
-      <Vote/>
+      <h2>{props.title}</h2>
+      <p>{props.text}</p>
     </div>
   );
 }	
